@@ -18,7 +18,7 @@ class BodyPage extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 20, top: 15),
                     child: CircleAvatar(
                       radius: 45,
-                      backgroundImage: AssetImage("assets/image_1.png"),
+                      backgroundImage: AssetImage(""),
                     ),
                   ),
                   Padding(
@@ -147,6 +147,7 @@ class BodyPage extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 100),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -155,9 +156,11 @@ class BodyPage extends StatelessWidget {
               Icon(Icons.person_pin_outlined),
             ],
           ),
+
           Divider(thickness: 0.5,color: Colors.white12,),
-          Icon(CupertinoIcons.camera_circle_fill,size: 40,),
-          Text("No Posts Yet")
+          SizedBox(height: 50,),
+          Icon(CupertinoIcons.camera_circle_fill,size: 150),
+          Text("No Posts Yet",style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.w600),)
           
         ],
       ),

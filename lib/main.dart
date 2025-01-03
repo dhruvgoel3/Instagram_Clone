@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:insta_clone/Screans/HomeScreans/Home_screan.dart';
 import 'package:insta_clone/Screans/ProfileScreans/Profile_screan.dart';
+import 'package:insta_clone/Screans/SearchScreans/Search_screan.dart';
 import 'package:insta_clone/Screans/SignupScrean/signup_screan.dart';
 import 'package:insta_clone/Screans/SplashScrean/splash_screan.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home:  ProfileScrean(),
+      home:  SearchScrean(),
     );
   }
 }
