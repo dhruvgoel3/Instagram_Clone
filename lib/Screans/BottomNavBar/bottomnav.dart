@@ -5,6 +5,7 @@ import 'package:insta_clone/Screans/HeartScreans/Heart_screan.dart';
 import 'package:insta_clone/Screans/HomeScreans/Home_screan.dart';
 import 'package:insta_clone/Screans/PostScreans/Post_screan.dart';
 import 'package:insta_clone/Screans/ProfileScreans/Profile_screan.dart';
+import 'package:insta_clone/Screans/ReelsScrean/reels_page.dart';
 import 'package:insta_clone/Screans/SearchScreans/Search_screan.dart';
 
 class Bottomnav extends StatefulWidget {
@@ -19,8 +20,9 @@ class _BottomnavState extends State<Bottomnav> {
   int currentIndex = 0;
   List<Widget> pages = [
     HomeScrean(),
-    SearchScrean(),
+    SearchScreen(),
     PostScrean(),
+    ReelsPage(),
     ProfileScrean(),
   ];
   @override
@@ -49,7 +51,7 @@ class _BottomnavState extends State<Bottomnav> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.add_box_outlined), label: "Post"),
               BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.heart), label: "Notification"),
+                  icon: Icon(Icons.slow_motion_video), label: "Reels"),
               BottomNavigationBarItem(
                   icon: Icon(Icons.person), label: "Profile"),
             ]),

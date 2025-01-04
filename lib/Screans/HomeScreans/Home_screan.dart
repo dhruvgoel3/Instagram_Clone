@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:insta_clone/Custom%20Widgets/UiHelper.dart';
+import 'package:insta_clone/Screans/HeartScreans/Heart_screan.dart';
 import 'package:insta_clone/Screans/HomeScreans/status_listview.dart';
 
 class HomeScrean extends StatelessWidget {
@@ -22,8 +23,11 @@ class HomeScrean extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 15),
-            child: Icon(CupertinoIcons.heart, color: Colors.white, size: 27),
+            padding: const EdgeInsets.only(right: 10),
+            child: IconButton(onPressed: (){
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => HeartScrean()));
+              }, icon: Icon(CupertinoIcons.heart,size: 25,color: Colors.white,))
           ),
           SizedBox(width: 6),
           Padding(
