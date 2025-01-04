@@ -15,38 +15,45 @@ class Bottomnav extends StatefulWidget {
 }
 
 class _BottomnavState extends State<Bottomnav> {
+  final PageController _pageController = PageController();
   int currentIndex = 0;
-  List<Widget>pages= [
+  List<Widget> pages = [
     HomeScrean(),
     SearchScrean(),
     PostScrean(),
-    HeartScrean(),
     ProfileScrean(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:
-      BottomNavigationBar(
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
-          selectedLabelStyle: TextStyle(color: Colors.white),
-          unselectedLabelStyle: TextStyle(color: Colors.grey),
-          backgroundColor: Colors.black,
-
-          onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-          },
-          items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-        BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: "Post"),
-        BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart), label: "Notification"),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-
-      ]),
+      bottomNavigationBar: Container(
+        child: BottomNavigationBar(
+            currentIndex: currentIndex,
+            type: BottomNavigationBarType.fixed,
+            iconSize: 25,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.grey,
+            selectedLabelStyle: TextStyle(color: Colors.white),
+            unselectedLabelStyle: TextStyle(color: Colors.grey),
+            backgroundColor: Colors.black,
+            onTap: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+              _pageController.jumpToPage(index);
+            },
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.search), label: "Search"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.add_box_outlined), label: "Post"),
+              BottomNavigationBarItem(
+                  icon: Icon(CupertinoIcons.heart), label: "Notification"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.person), label: "Profile"),
+            ]),
+      ),
       body: IndexedStack(
         children: pages,
         index: currentIndex,
