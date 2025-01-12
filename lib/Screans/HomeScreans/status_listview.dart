@@ -78,10 +78,16 @@ class StatusListview extends StatelessWidget {
             padding: const EdgeInsets.only(left: 5),
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: CircleAvatar(
-                radius: 30,
-                backgroundImage:
-                    NetworkImage(arrContent[index]["img"].toString()),
+              child: Column(
+                children: [
+                  CircleAvatar(
+
+                    radius: 30,
+                    backgroundImage:
+                        NetworkImage(arrContent[index]["img"].toString()),
+                  ),
+
+                ],
               ),
             ),
           );

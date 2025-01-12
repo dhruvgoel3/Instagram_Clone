@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:insta_clone/Screans/HomeScreans/status_listview.dart';
 import 'package:insta_clone/Screans/ProfileScreans/listview_page.dart';
 
 class BodyPage extends StatelessWidget {
@@ -15,10 +16,10 @@ class BodyPage extends StatelessWidget {
               Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 15),
+                    padding: const EdgeInsets.only(left: 20, top: 10),
                     child: CircleAvatar(
                       radius: 45,
-                      backgroundImage: AssetImage(""),
+                      backgroundImage: AssetImage("assets/dhruv.jpg.jpg"),
                     ),
                   ),
                   Padding(
@@ -147,7 +148,10 @@ class BodyPage extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 100),
+          SizedBox(height: 20,),
+
+          StatusListview(),
+          SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -160,8 +164,8 @@ class BodyPage extends StatelessWidget {
           Divider(thickness: 0.5,color: Colors.white12,),
           SizedBox(height: 50,),
           Icon(CupertinoIcons.camera_circle_fill,size: 150),
-          Text("No Posts Yet",style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.w600),)
-          
+          Text("No Posts Yet",style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.w600),),
+
         ],
       ),
     );
