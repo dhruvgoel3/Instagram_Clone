@@ -6,7 +6,6 @@ import 'package:insta_clone/Screans/SignupScrean/signup_screan.dart';
 import 'package:insta_clone/Screans/SplashScrean/splash_screan.dart';
 
 void main() {
-  
   runApp(const MyApp());
 }
 
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home:  SplashScrean(),
+      home: SplashScrean(),
     );
   }
 }
